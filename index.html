@@ -13,12 +13,18 @@
   
 </head>
 <body>
-  
+
+ <!-- en tête -->
+
 <div class="header">
 
   <nav class="menu">
+
+    <img class="panier" src="images/icon-cart.svg" alt="panier">
+    <span id="quantite"></span>
     <img class="logo_avatar" src="images/image-avatar.png" alt="image/icon">
     <img class="logo_sneakers" src="images/logo.svg" alt="logo/sneakers">
+
   <ul>
     
     <li><a href="#">Collections</a></li>
@@ -26,14 +32,37 @@
     <li><a href="#">Women</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Contact</a></li>
+
   </ul>
 </nav>
 </div>
-  
-  <div><p>hello word</p></div>
-  
-  
 
+<!-- text et prix -->
+<div class="text">
+    <p id="text1">Sneaker Company</p> 
+    <p id="text2">Fall Limited Edition <br> Sneakers</p> 
+    <p id="text3">These low-profile sneakers are your perfect casual wear <br> companion. Featuring a durable rubber outer sole, they’ll <br> withstand everything the weather can offer.</p>  
+
+  <div class="prix">
+    <p class="p1">$125.00</p>  
+    <p class="p3">$250.00</p> 
+    <p class="p2">50%</p> 
+  </div>
+<!-- compteur -->
+  
+    <button class="button_moins"><img src="images/icon-minus.svg" alt="moins"></button> 
+    <span class="produit-quantite">0</span>
+    <button class="button_plus"><img src="images/icon-plus.svg" alt="plus"></button>
+    <button class="button_add"><img src="images/icon-cart.svg" alt="boutton_add">   Add to cart</button>   
+  
+</div>
+
+<footer>
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div>
+</footer>
 
 
   </div>
