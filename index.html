@@ -21,7 +21,8 @@
   <nav class="menu">
 
     <img class="panier" src="images/icon-cart.svg" alt="panier">
-    <span id="quantite"></span>
+    <span id="counter">0</span>
+    <i data-feather="shopping-cart"></i>
     <img class="logo_avatar" src="images/image-avatar.png" alt="image/icon">
     <img class="logo_sneakers" src="images/logo.svg" alt="logo/sneakers">
 
@@ -49,22 +50,71 @@
     <p class="p2">50%</p> 
   </div>
 <!-- compteur -->
-  
-    <button class="button_moins"><img src="images/icon-minus.svg" alt="moins"></button> 
-    <span class="produit-quantite">0</span>
-    <button class="button_plus"><img src="images/icon-plus.svg" alt="plus"></button>
-    <button class="button_add"><img src="images/icon-cart.svg" alt="boutton_add">   Add to cart</button>   
-  
-</div>
 
-<footer>
-<div class="attribution">
-  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-  Coded by <a href="#">Your Name Here</a>.
-</div>
-</footer>
-
-
+<div class="flex-centre">
+  <div class="quantity buttons_added">
+    <input type="image" src="images/icon-minus.svg" value="-" class="minus" >
+    <input type="number" step="1" min="0" max="" name="quantity" value="0" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+    <input type="image" src="images/icon-plus.svg" value="+" class="plus" id="plus">
   </div>
+  <div>
+       <button id="add-animation">Add to cart</button> 
+  </div>
+
+</div>
+</div>
+<div class="product-images">
+  <!-- Large, currently-active image -->
+  <div class="current-image">
+    <a href="https://accessible360.com">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/blanca-paloma-sanchez-500x500.jpg" alt="Succulents 1">
+    </a>
+  </div>
+
+  <!-- Thumbnail track -->
+  <div class="thumbnails">
+    <div class="thumbnail">
+      <button class="thumbnail-button" aria-current="true">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/blanca-paloma-sanchez-500x500.jpg" alt="image 1 of 5" data-full-alt="Succulents 1">
+      </button>
+    </div>
+
+    <div class="thumbnail">
+      <button class="thumbnail-button">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/erol-ahmed-500x500.jpg" alt="image 2 of 5" data-full-alt="Succulents 2">
+      </button>
+    </div>
+
+    <div class="thumbnail">
+      <button class="thumbnail-button">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/armando-castillejo-500x500.jpg" alt="image 3 of 5" data-full-alt="Succulents 3">
+      </button>
+    </div>
+
+    <div class="thumbnail">
+      <button class="thumbnail-button">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/calle-macarone-500x500.jpg" alt="image 4 of 5" data-full-alt="Succulents 4">
+      </button>
+    </div>
+
+    <div class="thumbnail">
+      <button class="thumbnail-button">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3609497/annie-spratt-500x500.jpg" alt="image 5 of 5" data-full-alt="Succulents 5">
+      </button>
+    </div>
+  </div>
+</div>
+
+<a href="https://accessible360.com" class="credits" target="_blank">
+  Built by <b><u>Accessible360</u></b> <img src="https://assets.codepen.io/3609497/accessible360-logo-black.png" alt="">
+</a>
+
+
+
+<script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="test.css" />
+    <script src="index.js"></script>
+   
+
 </body>
 </html>
