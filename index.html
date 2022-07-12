@@ -2,15 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
@@ -60,16 +56,16 @@
 <!-- -------------------------------------------------------------------image carousel------------------------------------------------------------------- -->
 <div class="wrapper">
   <div class="carousel-container">
-    <a class="button" href="#popup1">
+    <div class="Click-here">
     <ul class="carousel">
       <li><img class="img1"src="images/image-product-1.jpg"></li>
       <li><img class="img2"src="images/image-product-2.jpg"></li>
       <li><img class="img3"src="images/image-product-3.jpg"></li>
       <li><img class="img4"src="images/image-product-4.jpg"></li>
     </ul>
-  </a>
   </div>
-</div>
+  </div>
+</div> 
 <!-- -------------------------------------------------------------carousel responsive------------------------------------------------------------- -->
 <div id="slider" class="slider">
   <img src="images/image-product-1.jpg" alt="img1" class="img__slider active"/>
@@ -84,25 +80,51 @@
   </div>
 </div>
 <!--------------------------------------------------------- pop up --------------------------------------------------------->
-<div class="box">
-
-</div>
-
-<div id="popup1" class="overlay">
-	<div class="popup">
-
-		<a class="close" href="#">&times;</a>
-		<div class="content">
-
-		</div>
-	</div>
-</div>
+ 
+<div class="custom-model-main">
+    <div class="custom-model-inner">        
+    <div class="close-btn">×</div>
+        <div class="custom-mode-wrapl">
+          <div class="c-carousel" data-interval = "5000">
+            <div class="c-carousel-item active">
+              <img src="images/image-product-1.jpg" alt="">
+            </div>
+            <div class="c-carousel-item">
+              <img src="images/image-product-2.jpg" alt="">
+            </div>
+            <div class="c-carousel-item">
+              <img src="images/image-product-3.jpg" alt="">
+            </div>
+            <div class="c-carousel-item">
+              <img src="images/image-product-4.jpg" alt="">
+            </div>
+            <div class="c-carousel-control-prev">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="c-carousel-control-next">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="c-carousel-indicators">
+              <ul>
+                <li class = "c-carousel-indicator-li active"></li>
+                <li class = "c-carousel-indicator-li"></li>
+                <li class = "c-carousel-indicator-li"></li>
+                <li class = "c-carousel-indicator-li"></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>  
+    <div class="bg-overlay"></div>
+</div> 
 <!--------------------------------------------------------------------- script------------------------------------------------------------------- -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="index.js"></script>
 <script type="text/javascript" src="plugin.js"></script>
 <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
 <script type="text/javascript" src="plugin.js"></script>
+<script src="https://kit.fontawesome.com/5eef641eb4.js" crossorigin="anonymous"></script>
+
 </body>
 <script type="text/javascript">
   var _gaq = _gaq || [];

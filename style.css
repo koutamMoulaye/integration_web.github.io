@@ -152,7 +152,7 @@ ul li a:hover{
     color: white;
   }
 
-/* --------------------------------image-------------------------------- */
+/* --------------------------------image carousel-------------------------------- */
 .body {
     overflow: hidden;
   }
@@ -543,61 +543,221 @@ nav::after{
 /* ***************************************************************partie pop up ****************************************************************/
 
 
-  
-
-
-
-
-
-.overlay {
+.custom-model-main {
+  text-align: center;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  bottom: 0;
-  left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
+  bottom: 0;
+  left: 0; /* z-index: 1050; */
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
   opacity: 0;
+  -webkit-transition: opacity 0.15s linear, z-index 0.15;
+  -o-transition: opacity 0.15s linear, z-index 0.15;
+  transition: opacity 0.15s linear, z-index 0.15;
+  z-index: -1;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-.overlay:target {
-  visibility: visible;
+
+.model-open {
+  z-index: 99999;
   opacity: 1;
+  overflow: hidden;
 }
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
+.custom-model-inner {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  display: inline-block;
+  vertical-align: middle;
+  width: 600px;
+  margin: 30px auto;
+  max-width: 97%;
+}
+.custom-model-wrap {
+  display: block;
+  width: 100%;
   position: relative;
-  transition: all 5s ease-in-out;
-}
+  border-radius: 6px;
 
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
+  outline: 0;
+  text-align: left;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-height: calc(100vh - 70px);
+	overflow-y: auto;
 }
- .close {
+.model-open .custom-model-inner {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  position: relative;
+  z-index: 999;
+}
+.model-open .bg-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 99;
+}
+.bg-overlay {
+  background: rgba(0, 0, 0, 0);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-transition: background 0.15s linear;
+  -o-transition: background 0.15s linear;
+  transition: background 0.15s linear;
+}
+.close-btn {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
+  right: 170px;
+  top: -30px;
+  cursor: pointer;
+  z-index: 99;
   font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
+  color: #fff;
 }
+
+@media screen and (min-width:800px){
+	.custom-model-main:before {
+	  content: "";
+	  display: inline-block;
+	  height: auto;
+	  vertical-align: middle;
+	  margin-right: -0px;
+	  height: 100%;
+	}
+}
+@media screen and (max-width:799px){
+  .custom-model-inner{margin-top: 45px;}
+}
+/******************************* slide pop up  *******************************/
+
+
+
+
+
+.c-carousel{
+  height:63vh;
+  width:70%;
+  position:relative;
+  display:flex;
+}
+.c-carousel-item{
+  position:absolute;
+  left:0;
+  top:0;
+  opacity:0;
+  width:100%;
+  height:100%;
+  transition:all 0.5s ease-in-out;
+}
+
+.c-carousel-item.active{
+  opacity:1;
+}
+.c-carousel-item img{
+  position:relative;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5%;
+}
+
+
+.c-carousel-control-prev{
+  position:absolute;
+  width:0px;
+  padding:0 40px;
+  height:60px;
+  left:-40px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:black;
+  background-color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  top: 227px;
+}
+.c-carousel-control-next{
+  position:absolute;
+  width:0px;
+  padding:0 40px;
+  height:60px;
+  right:-40px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:black;
+  background-color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  top: 227px;
+   border-radius: 50%;
+}
+.c-carousel-indicators{
+  position:absolute;
+  bottom:50px;
+  left:50%;
+  transform:translateX(-50%);
+  width:360px;
+  height:auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-carousel-indicators ul{
+  position:relative;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  top: 120px;
+  padding:5px;
+}
+
+.c-carousel-indicator-li{
+  position:relative;
+  display:inline-block;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index:3;
+  cursor:pointer;
+  transition:all 0.3s ease-in-out;
+  border-radius: 7%;
+  
+}
+
+.c-carousel-indicator-li.active{
+  transform:scale(1.1);
+  border:2px solid #ff7d1b;
+  border-radius: 5%;
+}
+.c-carousel-indicator-li.active{
+  opacity: .7;
  
-
-
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
+  
 }
+
+
