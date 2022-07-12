@@ -60,16 +60,18 @@
 <!-- -------------------------------------------------------------------image carousel------------------------------------------------------------------- -->
 <div class="wrapper">
   <div class="carousel-container">
+    <a class="button" href="#popup1">
     <ul class="carousel">
       <li><img class="img1"src="images/image-product-1.jpg"></li>
       <li><img class="img2"src="images/image-product-2.jpg"></li>
       <li><img class="img3"src="images/image-product-3.jpg"></li>
       <li><img class="img4"src="images/image-product-4.jpg"></li>
     </ul>
+  </a>
   </div>
 </div>
 <!-- -------------------------------------------------------------carousel responsive------------------------------------------------------------- -->
-<div class="slider">
+<div id="slider" class="slider">
   <img src="images/image-product-1.jpg" alt="img1" class="img__slider active"/>
   <img src="images/image-product-2.jpg" alt="img2" class="img__slider "/>
   <img src="images/image-product-3.jpg" alt="img3" class="img__slider "/>
@@ -80,6 +82,20 @@
   <div class="precedent">
     <i class="fa-solid fa-circle-chevron-left"></i>
   </div>
+</div>
+<!--------------------------------------------------------- pop up --------------------------------------------------------->
+<div class="box">
+
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+
+		</div>
+	</div>
 </div>
 <!--------------------------------------------------------------------- script------------------------------------------------------------------- -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

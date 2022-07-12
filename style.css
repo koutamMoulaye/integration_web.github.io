@@ -436,6 +436,12 @@ float: left;
   .open .ouvrir {
       display: none;
   }
+  .open #slider {
+    display: none;
+}
+.open .text {
+  display: none;
+}
 
   .open .fermer {
       display: block;
@@ -477,13 +483,12 @@ float: left;
   }
   .wrapper{
     display: none;
+    position: relative;
   }
 nav::after{
   display: none;
 }
 /* *****************************image carousel responsive ******************************/
-
-
 .slider{
   display: block;
   height: 50vh;
@@ -517,14 +522,82 @@ nav::after{
 .precedent{
   left: 1rem;
 }
-.counter{
-  left: 100px;
+
+.count{
+  background-color:rgba(247,248,253,255);
+            border: 1px solid;
+            color:black;
+            text-align:center;
+            width:30px;
+            height : 50px;
+            font-size:18px;
+            line-height:normal;
+            padding-top:15px;
+            outline: none;
+            border:transparent;
+            border-radius:10px;
+            
 }
 
+}
+/* ***************************************************************partie pop up ****************************************************************/
+
+
+  
 
 
 
 
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
 
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+ .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+ 
+
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
 }
